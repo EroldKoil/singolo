@@ -77,3 +77,87 @@ nav div {
     padding-bottom: 13px;
     cursor: context-menu;
 }
+.main__topLine{
+    width: 100%;
+    height: 6px;
+    background-color: #323746;
+}
+.main__bottomLine{
+    width: 100%;
+    height: 6px;
+    background-color: #ea676b;
+}
+
+.slider{
+    display: flex;
+    height: 594px;
+    background-color: #f06c64;
+    align-items: center;
+}
+.sliderLeft{
+    display: flex;
+    justify-content: center;
+    margin: 0 0 6px 42px;
+}
+.sliderRight{
+    display: flex;
+    justify-content: center;
+    margin: 0 0 5px 89px;
+}
+.sliderLeft__img {
+    height: 27px;
+}
+.sliderRight__img {
+    height: 27px;
+    transform: rotate(180deg);
+}
+
+.vertical{
+    width: 30%;
+    height: 100%;
+}
+
+.vertical__phone{
+    position: relative;
+    top: 51px;
+    left: 51px;
+    z-index: 1;
+}
+.vertical__phone_screen{
+    position: relative;
+    left: 53px;
+    bottom: 483px;
+    z-index: 2;
+}
+
+.vertical__phone_shadow{
+    position: relative;
+    left: 53px;
+    bottom: 997px;
+    z-index: 0;
+}
+
+.horizontal{
+    width: 50%;
+    height: 100%;
+}
+.horizontal__phone{
+    transform: rotate(90deg);
+    position: relative;
+    top: 49px;
+    left: 179px;
+    z-index: 1;
+}
+.horizontal__phone_screen{
+    position: relative;
+    bottom: 397px;
+    right: 5px;
+    z-index: 2;
+}
+.horizontal__phone_shadow{
+    position: relative;
+    left: 182px;
+    bottom: 998px;
+    z-index: 0;
+    transform: scale(1,-1) rotate(90deg);
+}
