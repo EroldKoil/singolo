@@ -106,10 +106,12 @@ nav div {
 }
 .sliderLeft__img {
     height: 27px;
+    cursor: pointer;
 }
 .sliderRight__img {
     height: 27px;
     transform: rotate(180deg);
+    cursor: pointer;
 }
 
 .vertical{
