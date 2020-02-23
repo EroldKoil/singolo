@@ -161,3 +161,103 @@ nav div {
     z-index: 0;
     transform: scale(1,-1) rotate(90deg);
 }
+
+footer{
+    padding: 70px 0px 0 40px;
+}
+h2{
+    font-size: 31px;
+    line-height: 17px;
+    color: #666d89;
+    font-family: 'Lato';
+    font-weight: 700;
+    text-align: left;
+}
+
+.footer__top p{
+    width: 953px;
+    height: 57px;
+    font-size: 17px;
+    line-height: 30px;
+    color: #767e9e;
+    font-family: "Lato";
+    font-weight: 300;
+    text-align: left;
+    margin-top: 28px;
+    letter-spacing: 0.19pt;
+}
+
+.services{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 46px 26px 0 0;
+}
+
+.services__one{
+    display: flex;
+    width: 33%;
+    height: 123px;
+}
+
+.services__one_img img{
+    cursor: pointer;
+}
+
+.services__one_text{
+    margin: 1px 0 0 18px;
+}
+
+.services__one_text h3{
+    font-size: 18px;
+    line-height: 18px;
+    color: #666d89;
+    font-family: "Lato";
+    font-weight: 900;
+    text-align: left;
+}
+
+.services__one_text p{
+    width: 219px;
+    height: 128px;
+    font-size: 12px;
+    line-height: 21px;
+    color: #767e9e;
+    font-family: "Lato";
+    font-weight: 400;
+    text-align: left;
+    margin-top: 9px;
+}
+.footer__bottom{
+    width: 100%;
+    background-color: #fff;
+    height: 6px;
+    margin-top: 27px;
+}
+
+nav a p:hover{
+    margin-top: 3px;
+    color: #6aa873;
+}
+
+.sliderLeft img:hover, .sliderRight img:hover{
+    height: 32px;
+    width: 18px;
+}
+.sliderLeft:hover{
+    margin-left: 40px;
+}
+.sliderRight:hover{
+    margin-right: 40px;
+}
+
+.services__one_img img:hover{
+    animation-duration: 1s;
+    animation-name: sl;
+}
+
+@keyframes sl {
+    to {
+        transform: rotate(360deg);
+    }
+}
