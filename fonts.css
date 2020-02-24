@@ -2,6 +2,7 @@
     font-family: 'Lato';
     font-style: normal;
     font-weight: normal;
-    src: local('Lato'), url('assets/fonts/Lato-Medium.woff') format('woff');
+    src: local('Lato'), url('assets/fonts/Lato-Medium.woff') format('woff'),
+    url('assets/fonts/Lato-Medium.ttf') format('ttf');
 }
 
