@@ -1,0 +1,224 @@
+*, html, body {
+    margin: 0;
+    padding: 0.1px;
+    box-sizing: border-box;
+    font-family: "Lato";
+}
+
+h4{
+	  font-family: "Lato"; 
+}
+body{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    background-color: #f2f2f2;
+}
+
+.content{
+    width:1020px;
+    margin: 0 auto;
+}
+
+.portfolio{
+    background-color: #2d303a;
+    width: 100%;
+    display: block;
+    padding: 71px 40px 68px 40px;
+}
+
+.portfolio__h2{
+    color: #666d89;
+}
+
+.portfolio__h3{
+    margin: 26px 0 0 0;
+    color: #767e9e;
+}
+
+h2{
+    font-size: 30px;
+    line-height: 18px;
+    font-weight: 900;
+    text-align: left;
+    letter-spacing: 0.7px;
+}
+
+h3{
+    font-size: 18px;
+    line-height: 31px;
+    font-weight: 100;
+    text-align: left;
+    letter-spacing: 0.0px;
+    word-spacing: -2.2px;
+}
+
+.sort-buttons{
+    margin: 8px 0 0 1px;
+    display: flex;
+    justify-content: space-between;
+    width: 288px;
+}
+
+.sort-buttons__button{
+    color: #5d7081;
+    border: solid 1px #5d7081;
+    border-radius: 5px;
+    padding: 3px 7px 2px 6px;
+    font-size: 12px;
+    line-height: 15px;
+    font-weight: 100;
+    cursor: pointer;
+}
+
+.sort-buttons__selected{
+    color: #fff;
+    border: solid 1px #fff;
+}
+
+
+.portfolio__images{
+    margin-top: 19px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr ;
+    height: 606px;
+    cursor: pointer;
+    grid-column-gap: 19.5px;
+    grid-row-gap: 14.5px;
+    overflow: hidden;
+}
+
+.about-us{
+    background-color: #f2f2f2;
+    padding: 71px 39px 67px 40px;
+}
+
+.about-us__h2{
+    color: #666d89;
+    letter-spacing: 0.4px;
+    margin-left: 1px;
+    word-spacing: -2px;
+}
+
+.about-us__h3{
+    margin-top: 26px;
+    color: #767e9e;
+    margin-left: -1px;
+    word-spacing: -1.3px;
+}
+
+.peoples{
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.peoples1{
+    margin-top: 40px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 301px 301px 301px;
+    grid-template-rows: 1fr;
+    grid-column-gap: 18.7px;
+    grid-row-gap: 14.5px;
+}
+
+
+
+.peoples__one{
+    display: block;
+}
+
+.peoples__one_name{
+    font-size: 18px;
+    line-height: 18px;
+    color: #666d89;
+    font-family: "Lato";
+    font-weight: 900;
+    text-align: left;
+    margin: 14px 0 0 -1px;
+    word-spacing: -1px;
+    letter-spacing: 0.4px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.peoples__one_description{
+    font-size: 12px;
+    line-height: 22px;
+    color: #767e9e;
+    font-family: "Lato";
+    font-weight: 400;
+    text-align: left;
+    word-spacing: -2px;
+    letter-spacing: 0.09px;
+    margin: 8px 0 0 -1px;
+}
+
+.peoples__one_contacts{
+    display: flex;
+    justify-content: space-between;
+    width: 152px;
+    margin: 22px 0 0 1px;
+}
+
+.contact{
+    border: solid 1px #747b94;
+    border-radius: 50%;
+    height: 32px;
+    width: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.partfolio__underline{
+    height: 6px;
+    width: 100%;
+    background-color: #323746;
+}
+.about-us__underline{
+    height: 5px;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+.sort-buttons__button:hover{
+    background-color: #4a4d58;
+}
+
+.image-contaner img{
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    transition: transform 0.2s linear;
+}
+.image-contaner img:hover{
+    -moz-transform: scale(1.15);
+    -webkit-transform: scale(1.15);
+    -o-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    transition: transform 0.3s linear;
+}
+
+.contact:hover{
+    animation-duration: 0.5s;
+    animation-name: link-rotate;
+    animation-fill-mode: forwards;
+}
+.contact:active{
+    background-color: rgba(141, 147, 181, 0.66);
+}
+
+@keyframes link-rotate {
+    to {
+        -moz-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
