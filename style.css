@@ -37,13 +37,14 @@ h1{
     text-transform: uppercase;
     color: #fff;
     font-size: 25px;
-    margin: 6px 0px 0 1px;
+    margin: 3px 0px 0 2px;
     font-weight: 100;
+    letter-spacing: -0.3px;
 }
 
 nav {
     display: flex;
-    margin: 12px 0 0 445px;
+    margin: 8px 0 0 447px;
     align-items: center;
     justify-content: space-around;
     width: 384px;
@@ -123,8 +124,8 @@ nav div {
 
 .vertical__phone{
     position: relative;
-    top: 51px;
-    left: 51px;
+    top: 52px;
+    left: 51.5px;
     z-index: 1;
 }
 .vertical__phone_screen{
@@ -148,8 +149,8 @@ nav div {
 .horizontal__phone{
     transform: rotate(90deg);
     position: relative;
-    top: 49px;
-    left: 179px;
+    top: 50px;
+    left: 180px;
     z-index: 1;
 }
 .horizontal__phone_screen{
@@ -167,33 +168,37 @@ nav div {
 }
 
 .our-services{
-    padding: 70px 0px 1px 40px;
+    padding: 68px 0px 1px 40px;
 }
-h2{
-    font-size: 31px;
-    line-height: 17px;
-    color: #666d89;
-    font-weight: 700;
+
+
+
+.our-services__top h2{
+    font-size: 29px;
+    line-height: 18px;
+    font-weight: 900;
     text-align: left;
+    letter-spacing: 1px;
+    word-spacing: -2px;
 }
 
 .our-services__top p{
     width: 953px;
     height: 57px;
-    font-size: 17px;
+    font-size: 17.1px;
     line-height: 30px;
     color: #767e9e;
-    font-weight: 300;
     text-align: left;
     margin-top: 28px;
-    letter-spacing: 0.19pt;
+    letter-spacing: 0.4px;
+    word-spacing: -0.6px;
 }
 
 .services{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 46px 26px 0 0;
+    padding: 45px 26px 0 0;
 }
 
 .services__one{
@@ -204,6 +209,7 @@ h2{
 
 .services__one_img img{
     cursor: pointer;
+    margin-top: 2px;
 }
 
 .services__one_text{
@@ -216,23 +222,27 @@ h2{
     color: #666d89;
     font-weight: 900;
     text-align: left;
+    letter-spacing: 0.4px;
+    word-spacing: 0px;
 }
 
 .services__one_text p{
-    width: 219px;
+    width: 220px;
     height: 128px;
     font-size: 12px;
     line-height: 21px;
     color: #767e9e;
     font-weight: 400;
-    text-align: left;
-    margin-top: 9px;
+    margin-top: 11px;
+    letter-spacing: 0.2px;
+    text-align: justify;
+    word-spacing: -1.6px;
 }
 .our-services__bottomLine{
     width: 100%;
     background-color: #fff;
     height: 6px;
-    margin-top: 27px;
+    margin-top: 31px;
 }
 
 nav a p:hover{
@@ -264,14 +274,11 @@ nav a p:hover{
 
 
 
-
-
-
 .portfolio{
     background-color: #2d303a;
     width: 100%;
     display: block;
-    padding: 71px 40px 68px 40px;
+    padding: 68px 40px 68px 40px;
 }
 
 .portfolio__h2{
@@ -281,6 +288,7 @@ nav a p:hover{
 .portfolio__h3{
     margin: 26px 0 0 0;
     color: #767e9e;
+    letter-spacing: 0.13px;
 }
 
 h2{
@@ -301,7 +309,7 @@ h3{
 }
 
 .sort-buttons{
-    margin: 8px 0 0 1px;
+    margin: 10px 0 0 1px;
     display: flex;
     justify-content: space-between;
     width: 288px;
@@ -338,31 +346,26 @@ h3{
 
 .about-us{
     background-color: #f2f2f2;
-    padding: 71px 39px 67px 40px;
+    padding: 69px 39px 67px 40px;
 }
 
 .about-us__h2{
     color: #666d89;
     letter-spacing: 0.4px;
     margin-left: 1px;
-    word-spacing: -2px;
 }
 
 .about-us__h3{
     margin-top: 26px;
     color: #767e9e;
     margin-left: -1px;
-    word-spacing: -1.3px;
+    letter-spacing: -0.1px;
+    text-align: justify;
+    word-spacing: -0.8px;
 }
 
 .peoples{
-    margin-top: 40px;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-.peoples1{
-    margin-top: 40px;
+    margin-top: 43px;
     width: 100%;
     display: grid;
     grid-template-columns: 301px 301px 301px;
@@ -370,8 +373,6 @@ h3{
     grid-column-gap: 18.7px;
     grid-row-gap: 14.5px;
 }
-
-
 
 .peoples__one{
     display: block;
@@ -391,22 +392,24 @@ h3{
     white-space: nowrap;
 }
 
+
 .peoples__one_description{
     font-size: 12px;
     line-height: 22px;
     color: #767e9e;
     font-weight: 400;
+    letter-spacing: 0.08px;
+    margin: 9px 0 0 -1px;
+    width: 303px;
+    word-spacing: -0.8px;
     text-align: left;
-    word-spacing: -2px;
-    letter-spacing: 0.09px;
-    margin: 8px 0 0 -1px;
 }
 
 .peoples__one_contacts{
     display: flex;
     justify-content: space-between;
     width: 152px;
-    margin: 22px 0 0 1px;
+    margin: 23px 0 0 1px;
 }
 
 .contact{
@@ -475,7 +478,7 @@ h3{
 
 
 .get-a-qoute{
-    padding: 70px 39px 34px 39px;
+    padding: 70px 39px 36px 39px;
     background-color: #f06c64;
 }
 .get-a-qoute__header{
@@ -490,15 +493,15 @@ h3{
 }
 .get-a-qoute__h3{
     margin: 29px 0 0 2px;
-    letter-spacing: 0.0px;
-    word-spacing: 1.3px;
+    letter-spacing: 0.19px;
+    word-spacing: 0.06px;
     width: 940px;
     height: 57px;
     font-size: 17px;
     line-height: 30px;
     color: #f0d8d9;
     font-weight: 100;
-    text-align: left;
+    text-align: justify;
 }
 
 .get-a-qoute__main{
@@ -537,6 +540,7 @@ form{
     line-height: 22px;
     font-weight: 400;
     text-align: left;
+    font-style: initial;
 }
 
 form textarea{
@@ -572,12 +576,12 @@ form textarea{
 .get-a-qoute__info_contact-text{
     width: 300px;
     font-size: 12px;
-    line-height: 21.999999px;
+    line-height: 21.6px;
     color: #f0d8d9;
     font-weight: 400;
-    text-align: left;
-    margin: 11px 0 21px 0;
-    letter-spacing: 0.0px;
+    text-align: justify;
+    margin: 10px 0 21px 0;
+    letter-spacing: 0.02px;
     word-spacing: -0.5px;
 }
 
@@ -590,7 +594,7 @@ form textarea{
 .get-a-qoute__info_contact a{
     width: 300px;
     font-size: 12px;
-    line-height: 21.9999999px;
+    line-height: 21.9px;
     color: #f0d8d9;
     font-weight: 400;
     text-align: left;
@@ -605,15 +609,15 @@ form textarea{
     margin: 5px 12px 0 2px;
 }
 .img-phone{
-    width: 10px;
+    width: 11px;
     height: 12px;
-    margin: 5px 12px 0 1px;
+    margin: 5px 10px 0 1px;
 }
 
 .img-mail{
     width: 13px;
     height: 9px;
-    margin: 7px 10px 0 0px;
+    margin: 8px 10px 0 0px;
 }
 
 .form-button{
@@ -730,3 +734,69 @@ footer{
 }
 
 
+@-moz-document url-prefix() {
+    .peoples__one_name{
+        font-size: 18px;
+        line-height: 18px;
+        color: #666d89;
+        font-weight: 900;
+        text-align: left;
+        margin: 14px 0 0 -1px;
+        word-spacing: -1px;
+        letter-spacing: 0.1px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    .our-services__top h2 {
+        letter-spacing: 0.4px;
+    }
+    .our-services__top p {
+        width: 940px;
+        line-height: 29.9px;
+        text-align: justify;
+        margin-top: 27px;
+        letter-spacing: 0.02px;
+        word-spacing: 1.0px;
+    }
+    .services__one_img img {
+        margin-top: 3px;
+    }
+    .services__one_text {
+        margin: 2px 0 0 18px;
+    }
+
+    .services__one_text h3 {
+        font-size: 19px;
+        line-height: 18px;
+        letter-spacing: -0.8px;
+        word-spacing: 0px;
+    }
+    .portfolio__h2 {
+        letter-spacing: -0.2px;
+    }
+    .portfolio__images {
+        margin-top: 20px;
+    }
+    .about-us__h2 {
+        letter-spacing: -0.3px;
+    }
+    .get-a-qoute {
+        padding: 69px 39px 36px 39px;
+    }
+    .get-a-qoute__header {
+        letter-spacing: 0.1px;
+    }
+    .get-a-qoute__info_contact-information {
+        letter-spacing: -0.1px;
+    }
+    .get-a-qoute__info_contact a {
+        line-height: 20.9px;
+    }
+    .get-a-qoute__input::placeholder {
+        line-height: 37px;
+    }
+    .get-a-qoute {
+        padding-bottom: 41px;
+    }
+}
