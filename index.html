@@ -6,58 +6,68 @@
     <link rel="stylesheet" href="style.css" >
     <link rel="stylesheet" href="fonts.css" >
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
 
 </head>
 <body>
     <div class="content">
-        <header>
+        <header >
             <div class="logo">
                 <h1>singolo</h1>
                 <p>*</p>
             </div>
-            <nav>
-                <a href="#" class="nav__button_selected">
+            <nav id="navigation">
+                <a href="#home" id="navHome" class="nav__button selectedNav">
                     <p>home</p>
                 </a>
                <div>.</div>
-                <a href="#" class="nav__button">
+                <a href="#services" id="navServices" class="nav__button">
                     <p>services</p>
                 </a>
                 <div>.</div>
-                <a href="#" class="nav__button">
+                <a href="#portfolio" id="navPortfolio" class="nav__button">
                     <p>portfolio</p>
                 </a>
                 <div>.</div>
-                <a href="#" class="nav__button">
+                <a href="#about" id="navAbout" class="nav__button">
                     <p>about</p>
                 </a>
                 <div>.</div>
-                <a href="#" class="nav__button">
+                <a href="#contact" id="navContact" class="nav__button">
                     <p>contact</p>
                 </a>
             </nav>
         </header>
         <div class="slider__topLine"></div>
-        <section class="slider">
-            <div class="sliderLeft">
+        <section id="home" class="slider">
+        
+            <div class="sliderLeft" id="sliderLeft">
                 <img class="sliderLeft__img" src="assets/img/chev.png">
             </div>
-            <div class="vertical">
-                <img class="vertical__phone" src="assets/img/phone.png">
-                <img class="vertical__phone_screen" src="assets/img/vertImage.png">
-                <img class="vertical__phone_shadow" src="assets/img/shadow.png">
+            <div class="slides" id="slides">
+                <div id="slide1" class="slider__content1">
+                    <div class="vertical">
+                        <img class="vertical__phone" src="assets/img/phone.png">
+                        <img id="vertical__phone_screen" class="vertical__phone_screen" src="assets/img/vertImage.png">
+                        <img class="vertical__phone_shadow" src="assets/img/shadow.png">
+                        <div id="vertical__phone_button" class="vertical__phone_button"></div>
+                    </div>
+                    <div class="horizontal">
+                        <img class="horizontal__phone" src="assets/img/phone.png">
+                        <img id="horizontal__phone_screen" class="horizontal__phone_screen" src="assets/img/horizontImage.png">
+                        <img class="horizontal__phone_shadow" src="assets/img/shadow.png">
+                        <div id="horizontal__phone_button" class="horizontal__phone_button"></div>
+                    </div >
+                </div>
             </div>
-            <div class="horizontal">
-                <img class="horizontal__phone" src="assets/img/phone.png">
-                <img class="horizontal__phone_screen" src="assets/img/horizontImage.png">
-                <img class="horizontal__phone_shadow" src="assets/img/shadow.png">
-            </div >
-            <div class="sliderRight">
+
+            <div class="sliderRight" id="sliderRight">
                 <img class="sliderRight__img" src="assets/img/chev.png">
             </div>
+            
         </section>
         <div class="slider__bottomLine"></div>
-        <div class="our-services">
+        <div id="services" class="our-services">
             <div class="our-services__top">
                 <h2>Our Services</h2>
                 <p>
@@ -146,59 +156,59 @@
         <div class="our-services__bottomLine"></div>
 
 
-        <section class="portfolio">
+        <section id="portfolio" class="portfolio">
             <h2 class="portfolio__h2">Portfolio</h2>
             <h3 class="portfolio__h3">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio
                 sem nec elit.
             </h3>
-            <div class="sort-buttons">
-                <div class="sort-buttons__button sort-buttons__selected">All</div>
-                <div class="sort-buttons__button">Web Design</div>
-                <div class="sort-buttons__button">Graphic Design</div>
-                <div class="sort-buttons__button">Artwork</div>
+            <div id="sort-buttons" class="sort-buttons">
+                <div id="sort-buttonsAll" class="sort-buttons__button sort-buttons__selected">All</div>
+                <div id="sort-buttonsWeb" class="sort-buttons__button">Web Design</div>
+                <div id="sort-buttonsGraphic" class="sort-buttons__button">Graphic Design</div>
+                <div id="sort-buttonsArtwork" class="sort-buttons__button">Artwork</div>
             </div>
-            <section class='portfolio__images'>
-                <div class='image-contaner'>
+            <section id="portfolio__images" class='portfolio__images'>
+                <div id="img1" class='image-contaner'>
                     <img src="assets/img/singolo2/partfolio/layer1.png">
                 </div>
-                <div class='image-contaner'>
+                <div id="img2" class='image-contaner'>
                     <img src="assets/img/singolo2/partfolio/layer2.png">
                 </div>
-                <div class='image-contaner'>
+                <div id="img3" class='image-contaner'>
                     <img src="assets/img/singolo2/partfolio/layer3.png">
                 </div>
-                <div class='image-contaner'>
+                <div id="img4" class='image-contaner'>
                     <img src="assets/img/singolo2/partfolio/layer4.png">
                 </div>
-                <div class='image-contaner'>
+                <div id="img5" class='image-contaner'>
                     <img src="assets/img/singolo2/partfolio/layer5.png">
                 </div>
-                <div class='image-contaner'>
+                <div id="img6" class='image-contaner'>
                     <img src="assets/img/singolo2/partfolio/layer6.png">
                 </div>
-                <div class='image-contaner'>
+                <div id="img7" class='image-contaner'>
                     <img src="assets/img/singolo2/partfolio/layer7.png">
                 </div>
-                <div class='image-contaner'>
+                <div id="img8" class='image-contaner'>
                     <img src="assets/img/singolo2/partfolio/layer8.png">
                 </div>
-                <div class='image-contaner'>
+                <div id="img9" class='image-contaner'>
                     <img src="assets/img/singolo2/partfolio/layer9.png">
                 </div>
-                <div class='image-contaner'>
+                <div id="img10" class='image-contaner'>
                     <img src="assets/img/singolo2/partfolio/layer10.png">
                 </div>
-                <div class='image-contaner'>
+                <div id="img11" class='image-contaner'>
                     <img src="assets/img/singolo2/partfolio/layer11.png">
                 </div>
-                <div class='image-contaner'>
+                <div id="img12" class='image-contaner'>
                     <img src="assets/img/singolo2/partfolio/layer12.png">
                 </div>
             </section>
 
         </section>
         <div class="portfolio__underline"></div>
-        <section class="about-us">
+        <section id="about" class="about-us">
             <h2 class="about-us__h2">About Us</h2>
             <h3 class="about-us__h3">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis,
                 non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus
@@ -274,7 +284,7 @@
         <div class="about-us__underline"></div>
 
 
-        <section class="get-a-qoute">
+        <section id="contact" class="get-a-qoute">
             <h2 class="get-a-qoute__header">Get a Quote</h2>
             <h3 class="get-a-qoute__h3">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
                 Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
@@ -283,16 +293,16 @@
             <div class="get-a-qoute__main">
                 <form action="#" class="form">
                     <div class="form__field">
-                        <input type="text" name="name" class="get-a-qoute__input" placeholder="Name(Required)" minlength="3" maxlength="25" required>
+                        <input id="form-name" type="text" name="name" class="get-a-qoute__input" placeholder="Name(Required)" minlength="3" maxlength="25" required>
                         <span class="form__error">This field must be between 3 and 20 characters</span>
                     </div>
                     <div class="form__field">
-                        <input type="email" name="mail" class="get-a-qoute__input" placeholder="Email(Required)"  required>
+                        <input id="form-email" type="email" name="mail" class="get-a-qoute__input" placeholder="Email(Required)"  required>
                         <span class="form__error">This field should contain E-Mail in the format example@site.com</span>
                     </div>
-                    <input type="text" name="subject" class="get-a-qoute__input" placeholder="Subject">
-                    <textarea  name="textarea" placeholder="Describe your project in detail..."></textarea>
-                    <button class="form-button" type="submit">Отправить</button>
+                    <input id="form-subject" type="text" name="subject" class="get-a-qoute__input" placeholder="Subject">
+                    <textarea  id="form-textarea" name="textarea" placeholder="Describe your project in detail..."></textarea>
+                    <button id="form-button" class="form-button" type="submit">ÐžÑ‚Ð¿Ñ€Ð°Ð²Ð¸Ñ‚ÑŒ</button>
                 </form>
                 <div class="get-a-qoute__info">
                     <div class="get-a-qoute__info_contact-information">Contact Information</div>
@@ -320,7 +330,7 @@
         </section>
         <div class="get-a-qoute__underline"></div>
         <footer>
-            <div class="copyright">© Copyright 2013</div>
+            <div class="copyright">Â© Copyright 2013</div>
             <div class="get-a-qoute__contacts">
                 <div class="contact">
                     <img src="assets/img/singolo2/links/facebook.png">
@@ -336,6 +346,15 @@
                 </div>
             </div>
         </footer>
+
+    <div id="messageFormBG" class="messageFormBG">
+        <div class="messageForm">
+            <div>ÐŸÐ¸ÑÑŒÐ¼Ð¾ Ð¾Ñ‚Ð¿Ñ€Ð°Ð²Ð»ÐµÐ½Ð¾</div>
+            <div id="messageForm__topic"></div>
+            <div id="messageForm__subject">ÐŸÐ¸ÑÑŒÐ¼Ð¾ Ð¾Ñ‚Ð¿Ñ€Ð°Ð²Ð»ÐµÐ½Ð¾</div>
+            <div id="messageForm__button" class="messageForm__button">OK</div>
+        </div>
+    </div>
 
     </div>
 </body>
