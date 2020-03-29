@@ -9,9 +9,14 @@
     <script src="script.js"></script>
 
 </head>
-<body>
+<body id="body">
     <div class="content">
-        <header >
+        <header id="header">
+            <div class="header__mobile-button" id="header__mobile-button">
+                <div class="header__mobile-button_line"></div>
+                <div class="header__mobile-button_line"></div>
+                <div class="header__mobile-button_line"></div>
+            </div>
             <div class="logo">
                 <h1>singolo</h1>
                 <p>*</p>
@@ -216,7 +221,7 @@
             </h3>
             <div class="peoples">
                 <div class="peoples__one">
-                    <img src="assets/img/singolo2/photo/photo2.png">
+                    <img class="peoples__one_photo" src="assets/img/singolo2/photo/photo2.png">
                     <div class="peoples__one_name">Adam Jensen</div>
                     <div class="peoples__one_description">Quisque luctus, quam eget molestie commodo, lacus purus cursus
                         purus, nec rutrum tellus dolor id lorem.
@@ -237,7 +242,7 @@
                     </div>
                 </div>
                 <div class="peoples__one">
-                    <img src="assets/img/singolo2/photo/photo1.png">
+                    <img class="peoples__one_photo" src="assets/img/singolo2/photo/photo1.png">
                     <div class="peoples__one_name">Desmond Miles</div>
                     <div class="peoples__one_description">Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam
                         laoreet, viverra lacus ut, ultrices velit.
@@ -258,7 +263,7 @@
                     </div>
                 </div>
                 <div class="peoples__one">
-                    <img src="assets/img/singolo2/photo/photo3.png">
+                    <img class="peoples__one_photo" src="assets/img/singolo2/photo/photo3.png">
                     <div class="peoples__one_name">Scolara Visari</div>
                     <div class="peoples__one_description">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis,
                         et consequat felis. Quisque condimentum.
@@ -293,16 +298,16 @@
             <div class="get-a-qoute__main">
                 <form action="#" class="form">
                     <div class="form__field">
-                        <input id="form-name" type="text" name="name" class="get-a-qoute__input" placeholder="Name(Required)" minlength="3" maxlength="25" required>
+                        <input id="form-name" type="text" name="name" class="get-a-qoute__input" placeholder="Name (required)" minlength="3" maxlength="25" required>
                         <span class="form__error">This field must be between 3 and 20 characters</span>
                     </div>
                     <div class="form__field">
-                        <input id="form-email" type="email" name="mail" class="get-a-qoute__input" placeholder="Email(Required)"  required>
+                        <input id="form-email" type="email" name="mail" class="get-a-qoute__input" placeholder="Email (required)"  required>
                         <span class="form__error">This field should contain E-Mail in the format example@site.com</span>
                     </div>
                     <input id="form-subject" type="text" name="subject" class="get-a-qoute__input" placeholder="Subject">
                     <textarea  id="form-textarea" name="textarea" placeholder="Describe your project in detail..."></textarea>
-                    <button id="form-button" class="form-button" type="submit">Отправить</button>
+                    <button id="form-button" class="form-button" type="submit">SEND</button>
                 </form>
                 <div class="get-a-qoute__info">
                     <div class="get-a-qoute__info_contact-information">Contact Information</div>
@@ -353,6 +358,38 @@
             <div id="messageForm__topic"></div>
             <div id="messageForm__subject">Письмо отправлено</div>
             <div id="messageForm__button" class="messageForm__button">OK</div>
+        </div>
+    </div>
+    <div class="burger__background" id="burger">
+        <div class="burger" >
+            <div class="burger__header">
+                <div class="header__mobile-button" id="header__mobile-button_2">
+                    <div class="header__mobile-button_line"></div>
+                    <div class="header__mobile-button_line"></div>
+                    <div class="header__mobile-button_line"></div>
+                </div>
+                <div class="logo-Mobile">
+                    <h1>singolo</h1>
+                    <p>*</p>
+                </div>
+            </div>
+            <div class="burger_nav">
+                <a href="#home" id="navHomeMobile" class="nav__button_mobile selectedNav">
+                    <p>home</p>
+                </a>
+                <a href="#services" id="navServicesMobile" class="nav__button_mobile">
+                    <p>services</p>
+                </a>
+                <a href="#portfolio" id="navPortfolioMobile" class="nav__button_mobile">
+                    <p>portfolio</p>
+                </a>
+                <a href="#about" id="navAboutMobile" class="nav__button_mobile">
+                    <p>about</p>
+                </a>
+                <a href="#contact" id="navContactMobile" class="nav__button_mobile">
+                    <p>contact</p>
+                </a>
+            </div>
         </div>
     </div>
 
