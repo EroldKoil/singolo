@@ -1,5 +1,7 @@
 let selectedNav;
+let header;
 let nav;
+let home;
 let activeSlide = 1;
 let slides;
 let slide1;
@@ -10,13 +12,27 @@ let sortButtons;
 let selectedSortButton;
 let selectedImage = null;
 let portfolioImages;
+let headerMobileButton;
+let isMenuNavVisible = false;
+let burger;
 
 window.onload = function (){
+
+
 	selectedNav = document.getElementById('navHome');
 	nav = document.getElementById('navigation');
 	sortButtons = document.getElementById('sort-buttons');
 	selectedSortButton = document.getElementById('sort-buttonsAll');
 	portfolioImages = document.getElementById('portfolio__images');
+	header = document.getElementById('header');
+	home =  document.getElementById('home');
+
+	headerMobileButton = document.getElementById('header__mobile-button');
+	burger = document.getElementById('burger');
+	headerMobileButton.addEventListener('click', visibleMenu);
+	document.getElementById('header__mobile-button_2').addEventListener('click', visibleMenu);
+
+
 
 	/*Header*/
 	nav.addEventListener('click', function (event) {
@@ -71,7 +87,6 @@ window.onload = function (){
 	slide2.innerHTML = '<div class="slider__content2"></div>';
 
 	slides.ontransitionend = ()=> {
-		console.log('end');
 		if(activeSlide == 1){
 			slides.innerHTML = '';
 			slides.appendChild(slide1);
@@ -172,4 +187,14 @@ function sliderNormalPos() {
 		slides.appendChild(slide2);
 	}
 	slides.className='slides';
+}
+
+function visibleMenu(){
+	isMenuNavVisible = !isMenuNavVisible;
+	if(isMenuNavVisible){
+		burger.style.display = 'block'
+	}
+	else{
+		burger.style.display = 'none'
+	}
 }
