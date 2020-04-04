@@ -11,7 +11,7 @@ body{
     display: block;
     background-color: #f2f2f2;
     max-width: 1020px;
-    width: 768px;
+    min-width: 320px;
     width: 100%;
 }
 
@@ -190,6 +190,7 @@ nav div {
     bottom: 1074px;
     left: 140px;
     z-index: 9;
+    cursor: pointer;
 }
 .horizontal__phone_button{
     display: block;
@@ -200,6 +201,7 @@ nav div {
     bottom: 1274px;
     left: 70px;
     z-index: 9;
+    cursor: pointer;
 }
 
 .horizontal{
@@ -940,11 +942,17 @@ footer{
 .nav__button_mobile{
     text-decoration: none;
 }
+.burger a {
+    color: #fff;
+}
+
+.burger a p:hover{
+    color: #6aa873;
+}
 
 .burger a p {
     line-height: 43px;
     letter-spacing: -0.8px;
-    color: #fff;
     text-transform: uppercase;
     font-size: 24px;
     margin-bottom: 15px;

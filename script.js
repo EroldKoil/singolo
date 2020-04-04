@@ -20,6 +20,10 @@ let sliderActive = true;
 window.onload = function (){
 
 
+ window.addEventListener('scroll', scrolling);
+
+
+
 	selectedNav = 'navHome';
 	nav = document.getElementById('navigation');
 	sortButtons = document.getElementById('sort-buttons');
@@ -160,48 +164,48 @@ window.onload = function (){
 		sliderGoTo('left');
 	});
 
-		document.getElementById('sliderRight').addEventListener('click',function () {
-			sliderGoTo('right');
-		});
+	document.getElementById('sliderRight').addEventListener('click',function () {
+		sliderGoTo('right');
+	});
 
-		/*Slider. Активация экранов телефонов*/
-		document.getElementById('vertical__phone_button').addEventListener('click',function () {
-			let vScreen = document.getElementById('vertical__phone_screen');
-			if(verticalScreenOn == true){
-				vScreen.style.visibility = 'hidden';
-			}
-			else{
-				vScreen.style.visibility = 'visible';
-			}
-			verticalScreenOn = !verticalScreenOn;
-		});
-		document.getElementById('horizontal__phone_button').addEventListener('click',function () {
-			let vScreen = document.getElementById('horizontal__phone_screen');
-			if(horizontalScreenOn == true){
-				vScreen.style.visibility = 'hidden';
-			}
-			else{
-				vScreen.style.visibility = 'visible';
-			}
-			horizontalScreenOn = !horizontalScreenOn;
-		});
+	/*Slider. Активация экранов телефонов*/
+	document.getElementById('vertical__phone_button').addEventListener('click',function () {
+		let vScreen = document.getElementById('vertical__phone_screen');
+		if(verticalScreenOn == true){
+			vScreen.style.visibility = 'hidden';
+		}
+		else{
+			vScreen.style.visibility = 'visible';
+		}
+		verticalScreenOn = !verticalScreenOn;
+	});
+	document.getElementById('horizontal__phone_button').addEventListener('click',function () {
+		let vScreen = document.getElementById('horizontal__phone_screen');
+		if(horizontalScreenOn == true){
+			vScreen.style.visibility = 'hidden';
+		}
+		else{
+			vScreen.style.visibility = 'visible';
+		}
+		horizontalScreenOn = !horizontalScreenOn;
+	});
 
 
-		/*Get a quote*/
-		document.getElementById("form-button").addEventListener("click", function (event) {
-			event.preventDefault();
-			let name = document.getElementById("form-name").value;
-			let subject = document.getElementById("form-subject").value;
-			name = name == ''?'Без темы':'Тема: ' + name;
-			subject = subject == ''?'Без описания':'Описание: ' + subject;
+	/*Get a quote*/
+	document.getElementById("form-button").addEventListener("click", function (event) {
+		event.preventDefault();
+		let name = document.getElementById("form-name").value;
+		let subject = document.getElementById("form-subject").value;
+		name = name == ''?'Без темы':'Тема: ' + name;
+		subject = subject == ''?'Без описания':'Описание: ' + subject;
 
-			document.getElementById("messageForm__topic").innerText = name;
-			document.getElementById("messageForm__subject").innerText = subject;
-			document.getElementById("messageFormBG").style.display = 'flex';
-		});
+		document.getElementById("messageForm__topic").innerText = name;
+		document.getElementById("messageForm__subject").innerText = subject;
+		document.getElementById("messageFormBG").style.display = 'flex';
+	});
 
-		document.getElementById("messageForm__button").addEventListener("click", function (event) {
-			document.getElementById("messageFormBG").style.display = 'none';
+	document.getElementById("messageForm__button").addEventListener("click", function (event) {
+		document.getElementById("messageFormBG").style.display = 'none';
 
 	});
 
@@ -251,5 +255,41 @@ function navigation(event) {
 			isMenuNavVisible = !isMenuNavVisible;
 			burger.style.display = 'none';
 		}
+	}
+}
+
+function  scrolling(){
+	let homePos = 0;
+	let servicesPos = document.getElementById('services').getBoundingClientRect().y + pageYOffset;
+	let portfolioPos = document.getElementById('portfolio').getBoundingClientRect().y + pageYOffset;
+	let aboutPos =  document.getElementById('about').getBoundingClientRect().y + pageYOffset;
+	let contactPos =  document.getElementById('contact').getBoundingClientRect().y + pageYOffset;
+
+	let newSelectedNav;
+
+	if(pageYOffset <  (homePos + servicesPos)/2 ){
+		newSelectedNav = 'navHome';
+	}
+	else if(pageYOffset < (portfolioPos + servicesPos)/2 ){
+		newSelectedNav = 'navServices';
+	}
+	else if(pageYOffset < (aboutPos + portfolioPos)/2 ){
+		newSelectedNav = 'navPortfolio';
+	}
+	else if(pageYOffset < (contactPos + aboutPos)/2 ){
+		newSelectedNav = 'navAbout';
+	}
+	else{
+		newSelectedNav = 'navContact';
+	}
+
+	if (newSelectedNav != selectedNav){
+		let selectedNavArray = [document.getElementById(selectedNav), document.getElementById(selectedNav + 'Mobile')];
+		selectedNavArray[0].classList.remove("selectedNav");
+		selectedNavArray[1].classList.remove("selectedNav");
+
+		selectedNav = newSelectedNav;
+		document.getElementById(selectedNav).classList.add("selectedNav");
+		document.getElementById(selectedNav + 'Mobile').classList.add("selectedNav");
 	}
 }
