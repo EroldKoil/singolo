@@ -116,9 +116,9 @@ window.onload = function (){
 			let promise = new Promise((resolve)=>{
 				if(way == 'left'){
 					let move = setInterval(async () =>{
-						slides.style.right = width * i / 100 + 'px';
+						slides.style.right = width * i / 20 + 'px';
 						i++;
-						if(i > 100){
+						if(i > 20){
 							clearInterval(move);
 							if(activeSlide == 2) {
 								document.getElementById('slider__bottomLine').style.margin = '-3px 0 0 0';
@@ -127,18 +127,18 @@ window.onload = function (){
 							}
 							resolve();
 						}
-					},3);
+					},18);
 
 				}
 				else{
 					let move = setInterval(async () =>{
-						slides.style.right = width - (width * i / 100)  + 'px';
+						slides.style.right = width - (width * i / 20)  + 'px';
 						i++;
-						if(i > 100){
+						if(i > 20){
 							clearInterval(move);
 							resolve();
 						}
-					},3);
+					},18);
 				}
 
 			});
