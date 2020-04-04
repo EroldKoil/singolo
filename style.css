@@ -122,33 +122,6 @@ nav div {
     right: 0;
 }
 
-.slides__leftPosition{
-    height: 100%;
-    display: flex;
-    position: relative;
-    right: 1020px;
-    transition-duration: 0.7s;
-}
-
-.slides__rightPosition{
-    height: 100%;
-    display: flex;
-    position: relative;
-    right: 1020px;
-}
-
-.slides__normalPosition{
-    height: 100%;
-    display: flex;
-    position: relative;
-    right: 0px;
-    left: 0px;
-    transition-duration: 0.7s;
-}
-
-
-
-
 
 .slider__content1{
     height: 100%;
@@ -161,8 +134,6 @@ nav div {
 .slider__content2{
     height: 100%;
     width: 100%;
-    background-image: url("assets/img/singolo3/slide2.png");
-    display: flex;
     position: relative;
 }
 
@@ -286,7 +257,7 @@ nav div {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 45px 26px 0 0;
+    padding: 43px 26px 0 0;
 }
 
 .services__one{
@@ -298,6 +269,7 @@ nav div {
 
 .services__one_img{
     z-index: 10;
+
 }
 .services__one_img img{
     cursor: pointer;
@@ -452,13 +424,11 @@ h3{
 .about-us__h2{
     color: #666d89;
     letter-spacing: 0.4px;
-    margin-left: 1px;
 }
 
 .about-us__h3{
     margin-top: 26px;
     color: #767e9e;
-    margin-left: -1px;
     letter-spacing: -0.1px;
     text-align: justify;
     word-spacing: -0.8px;
@@ -680,6 +650,7 @@ form textarea{
     margin: 10px 0 24px 0;
     letter-spacing: 0.02px;
     word-spacing: -0.5px;
+    word-break: break-all;
 }
 
 .get-a-qoute__info_contact{
@@ -1007,7 +978,7 @@ footer{
     margin: 1px 0 0px 1px;
 }
 
-@media (min-width: 375px) and (max-width: 767px){
+@media (min-width: 320px) and (max-width: 767px){
 
     .header__mobile-button {
         display: block;
@@ -1016,7 +987,7 @@ footer{
         height: 71px;
     }
     .logo {
-        margin: 5px 0px 0 26.1vw;
+        margin: 5px 0px 0 26.4%;
         align-self: center;
     }
     h1 {
@@ -1029,8 +1000,10 @@ footer{
     }
     .logo p {
         color: #f06c64;
-        margin: 0;
         font-size: 22px;
+        bottom: 2px;
+        margin: 0;
+        position: relative;
     }
     nav {
         display: none;
@@ -1042,7 +1015,7 @@ footer{
         margin-top: 70px;
     }
     .slider {
-        height: 57.2vw;
+        height: 56vw;
         max-height: 594px;
     }
 
@@ -1050,53 +1023,57 @@ footer{
         margin: 2px 0 0 9px;
     }
     .sliderRight {
-        margin: 2px 0 0 92.4vw;
+        margin: 2px 0 0 89.5vw;
     }
     .sliderRight__img , .sliderLeft__img{
         height: 25px;
     }
     .vertical {
-        margin: 0 0px 0 10.58vw;
+        margin: 0 0px 0 10.54%;
     }
     .vertical__phone {
-        top: 5.1vw;
+        top: 4.97vw;
         left: 0vw;
-        width: 21.1vw;
+        width: 20.5vw;
     }
     .vertical__phone_screen {
-        left: 0.1vw;
-        bottom: 47.1vw;
-        width: 56.2vw;
+        left: -0.0vw;
+        top: -46.0vw;
+        width: 55.0vw;
+        bottom: 0;
     }
     .vertical__phone_shadow {
-        left: 0.1vw;
-        bottom: 97.5vw;
-        width: 23.3vw;
+        left: 0.4vw;
+        bottom: 0;
+        top: -94.7vw;
+        width: 22.55vw;
     }
     .vertical__phone_button {
         width: 4.5vw;
         height: 4.5vw;
-        bottom: 106vw;
+        bottom: 103vw;
         left: 8.5vw;
     }
     .horizontal__phone {
-        top: 5.1vw;
-        left: 12.2vw;
-        width: 21.2vw;
+        top: 4.98vw;
+        left: 11.9vw;
+        width: 20.5vw;
     }
     .horizontal__phone_screen {
-        bottom: 38.8vw;
-        right: 5.6vw;
-        width: 56.2vw;
+        bottom: 0;
+        left: -5.1vw;
+        width: 54.4vw;
+        top: -37.2vw;
     }
     .horizontal__phone_shadow {
-        left: 12.5vw;
-        bottom: 97.6vw;
-        width: 23.3vw;
+        left: 12.4vw;
+        bottom: 0;
+        top: -94.1vw;
+        width: 22.5vw;
     }
     .horizontal__phone_button {
-        bottom: 125.4vw;
-        left: 1.5vw;
+        bottom: 120.4vw;
+        left: 1.3vw;
         width: 4.5vw;
         height: 4.5vw;
     }
@@ -1112,10 +1089,11 @@ footer{
         word-spacing: -1.5px;
     }
     .our-services__top p {
-        width: 79.6vw;
+        width: 77.6vw;
         margin-top: 27px;
-        letter-spacing: 0.3px;
-        word-spacing: 0.0px;
+        letter-spacing: 0.4px;
+        word-spacing: 0px;
+        text-align: left;
     }
     .services {
         padding: 26px 26px 3px 0;
@@ -1132,7 +1110,7 @@ footer{
         margin-bottom: 22px;
     }
     .services__one_text p {
-        width: 58.1vw;
+        width: 56.1vw;
         font-size: 12px;
         line-height: 22px;
         margin-top: 10px;
@@ -1145,38 +1123,48 @@ footer{
         display: none;
     }
     .portfolio {
-        padding: 51px 40px 28px 30px;
+        padding: 51px 18px 39px 30px;
     }
     .portfolio__h2 {
         color: #666d89;
         letter-spacing: 0.2px;
     }
+
+    .portfolio__h3 {
+        margin: 26px 0 0 0;
+        color: #767e9e;
+        letter-spacing: -0.07px;
+        text-align: left;
+        word-spacing: -0.1px;
+        width: 80vw;
+    }
+
     .sort-buttons {
         margin: 14px 0 0 0px;
-        width: 290px;
+        width: 89%;
     }
     .sort-buttons__button {
         padding: 3px 6px 2px 6px;
     }
 
     .image-contaner img {
-        height: 33.5vw;
-        width: 39.4vw;
+        height: 32.65vw;
+        width: 38.4vw;
     }
     .portfolio__images {
         margin-top: 25px;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
-        height: 148vw;
-        grid-column-gap: 2.6vw;
-        grid-row-gap: 10.4px;
+        height: 142vw;
+        grid-column-gap: 0.9vw;
+        grid-row-gap: 11.1px;
         overflow: hidden;
         width: 83vw;
     }
 
     .about-us {
-        padding: 42px 39px 9px 29px;
+        padding: 42px 30px 10px 30px;
     }
     .about-us__h2 {
         letter-spacing: 0.6px;
@@ -1191,7 +1179,7 @@ footer{
         line-height: 30.3px;
     }
     .peoples {
-        margin: 25px 0 0 2px;
+        margin: 25px 0 0 1px;
         width: 100%;
         display: block;
     }
@@ -1200,7 +1188,7 @@ footer{
         margin-bottom: 35px;
     }
     .peoples__one_photo{
-        width: 81.9vw;
+        width: 80.1vw;
     }
     .peoples__one_name {
         font-size: 18px;
@@ -1222,8 +1210,8 @@ footer{
         font-weight: 400;
         letter-spacing: 0px;
         margin: 3px 0 0 0px;
-        width: 83vw;
-        word-spacing: 0.2px;
+        width: 79.9vw;
+        word-spacing: 0;
         text-align: justify;
     }
     .peoples__one_contacts {
@@ -1235,7 +1223,7 @@ footer{
     }
 
     .get-a-qoute {
-        padding: 55px 39px 41px 29px;
+        padding: 55px 39px 40px 29px;
     }
     .get-a-qoute__header {
         margin: 0px 10px 10px 1px;
@@ -1257,7 +1245,7 @@ footer{
         padding: 0px 0 0 1px;
     }
     .get-a-qoute__input {
-        width: 82vw;
+        width: 80vw;
         border: solid 0px;
         border-radius: 5px;
         height: 38px;
@@ -1271,8 +1259,8 @@ footer{
         margin-top: 11px;
     }
     form textarea {
-        width: 82vw;
-        height: 41.4vw;
+        width: 80vw;
+        height: 40.6vw;
         margin-top: 12px;
         padding: 5px 0 0 7px;
         resize: none;
@@ -1284,8 +1272,8 @@ footer{
         border: solid 0px;
         color: #886A30;
         padding: 0 0 2px 0;
-        margin: 10px 0 0 0;
-        width: 82vw;
+        margin: 11px 0 0 0;
+        width: 80.3vw;
         height: 50px;
         background-color: #FBC65F;
     }
@@ -1296,11 +1284,11 @@ footer{
         letter-spacing: 0.2px;
     }
     .get-a-qoute__info_contact-text {
-        width: 83vw;
-        line-height: 21.8px;
+        width: 80.8vw;
+        line-height: 22px;
         margin: 3px 0 12px 0;
-        letter-spacing: 0.02px;
-        word-spacing: -0.5px;
+        letter-spacing: 0.01px;
+        word-spacing: 0.5px;
     }
     .get-a-qoute__info_contact {
         font-style: normal;
@@ -1308,10 +1296,15 @@ footer{
     }
 
     .img-location {
-        margin: 5px 13px 0 2px;
+        margin: 4px 13px 0 2px;
     }
     .img-phone {
-        margin: 5px 11px 0 1px;
+        margin: 6px 11px 0 1px;
+    }
+    .img-mail {
+        width: 13px;
+        height: 10px;
+        margin: 8px 10px 0 0px;
     }
     .get-a-qoute__underline {
         display: none;
@@ -1355,65 +1348,68 @@ footer{
         text-decoration: none;
         margin-left: 15px;
     }
+    .slider__topLine {
+        margin-top: 88px;
+    }
     .slider {
-        height: 57.05vw;
+        height: 57vw;
     }
     .sliderLeft {
         margin: 3px 0 0 3.8vw;
     }
     .sliderRight {
-        margin: 3px 0px 5px 93.3vw;
+        margin: 3px 0px 5px 92.3vw;
     }
 
     .vertical__phone {
         top: 5.16vw;
         left: 3.17vw;
-        width: 21.08vw;
+        width: 20.9vw;
     }
 
     .vertical__phone_screen {
-        bottom: 46.34vw;
+        bottom: 46.0vw;
         left: 3.4vw;
         width: 55.6vw;
     }
 
     .vertical__phone_shadow {
         left: 3.5vw;
-        bottom: 95.7vw;
-        width: 23.16vw;
+        bottom: 95.1vw;
+        width: 22.9vw;
     }
     .vertical__phone_button {
         width: 4.5vw;
         height: 4.5vw;
-        bottom: 103.5vw;
+        bottom: 103vw;
         left: 11.5vw;
     }
 
     .horizontal__phone {
-        top: 5.1vw;
-        left: 15.59vw;
-        width: 21.09vw;
+        top: 5.2vw;
+        left: 15.45vw;
+        width: 20.9vw;
     }
     .horizontal__phone_screen {
-        bottom: 38.06vw;
-        right: 2.25vw;
+        top: -37.8vw;
+        left: -2.6vw;
         width: 56.1vw;
     }
     .horizontal__phone_shadow {
         left: 15.79vw;
-        bottom: 96.2vw;
-        width: 23.3vw;
+        top: -95.4vw;
+        width: 22.9vw;
     }
     .horizontal__phone_button {
         width: 4.5vw;
         height: 4.5vw;
-        bottom: 123.5vw;
+        bottom: 122.4vw;
         left: 4.6vw;
     }
 
 
     .our-services {
-        padding: 49px 0px 1px 40px;
+        padding: 49px 0px 3px 40px;
     }
 
     .our-services__top p {
@@ -1432,7 +1428,7 @@ footer{
     }
     .services__one {
         width: 49.6%;
-        margin-bottom: 48px;
+        margin-bottom: 47px;
     }
 
     .services__one_text h3 {
@@ -1458,7 +1454,7 @@ footer{
     }
 
     .portfolio__images {
-        margin: 28px 0 0 -1px;
+        margin: 26px 0 0 -1px;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
         height: 799px;
@@ -1472,21 +1468,21 @@ footer{
     }
 
     .about-us {
-        padding: 61px 39px 69px 40px;
+        padding: 61px 39px 70px 40px;
     }
     .about-us__h3 {
         margin-top: 27px;
         margin-left: -1px;
-        letter-spacing: -0.07px;
-        word-spacing: 0.0px;
-        width: 86.4vw;
+        letter-spacing: 0px;
+        word-spacing: -0.2px;
+        width: 85.6vw;
         line-height: 30.3px;
     }
 
     .peoples {
-        margin: 37px 0 0 2px;
-        grid-template-columns: 28.1vw 28.1vw 28.1vw;
-        grid-column-gap: 1.9vw;
+        margin: 38px 0 0 2px;
+        grid-template-columns: 27.9vw 27.9vw 27.9vw;
+        grid-column-gap: 1.8vw;
     }
     .peoples__one_photo {
         width: 100%;
@@ -1510,7 +1506,7 @@ footer{
     }
 
     .peoples__one_contacts {
-        margin: 11px 0 0 1px;
+        margin: 11px 0 0 0px;
     }
 
     .get-a-qoute {
@@ -1525,37 +1521,42 @@ footer{
     .get-a-qoute__h3 {
         letter-spacing: 0.4px;
         word-spacing: 0.06px;
-        width: 86.4vw;
+        width: 85.6vw;
     }
     form {
-        padding: 13px 0 0 0px;
+        padding: 12px 0 0 0px;
     }
     .get-a-qoute__input {
-        width: 56.85vw;
+        width: 56.3vw;
         margin-top: 12px;
         padding-left: 10px;
     }
     form textarea {
-        width: 56.85vw;
-        height: 20.45vw;
+        width: 56.3vw;
+        height: 20.2vw;
         margin-top: 12px;
         padding: 5px 0 0 10px;
+    }
+    .form-button {
+        margin: 14px 0 0 0;
+        height: 38px;
     }
     .get-a-qoute__info {
         padding: 24px 0 0 29px;
     }
 
     .get-a-qoute__info_contact-information {
-        letter-spacing: 0.18px;
-        word-spacing: -0.2px;
+        letter-spacing: 0.1px;
+        word-spacing: 1px;
     }
 
     .get-a-qoute__info_contact-text {
-        width: 28.4vw;
+        width: 28.1vw;
         line-height: 22.2px;
-        margin: 3px 0 11px 0;
-        letter-spacing: 0px;
+        margin: 3px 0 10px 0;
+        letter-spacing: 0.1px;
         word-spacing: 0px;
+        word-break: normal;
     }
     .copyright {
         margin: 2px 0 0 39px;
@@ -1566,5 +1567,15 @@ footer{
     .get-a-qoute__contacts {
         margin: 0 42px 0 auto;
     }
-}
+    .img-location {
+        margin: 4px 12px 0 2px;
+    }
+    .img-phone {
+        width: 12px;
+        margin: 5px 10px 0 0px;
+    }
 
+
+
+
+}

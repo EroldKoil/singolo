@@ -15,11 +15,12 @@ let portfolioImages;
 let headerMobileButton;
 let isMenuNavVisible = false;
 let burger;
+let sliderActive = true;
 
 window.onload = function (){
 
 
-	selectedNav = document.getElementById('navHome');
+	selectedNav = 'navHome';
 	nav = document.getElementById('navigation');
 	sortButtons = document.getElementById('sort-buttons');
 	selectedSortButton = document.getElementById('sort-buttonsAll');
@@ -35,18 +36,8 @@ window.onload = function (){
 
 
 	/*Header*/
-	nav.addEventListener('click', function (event) {
-		let target = event.target.parentNode;
-	        if(target.tagName == "A"){
-	        	selectedNav.classList.remove("selectedNav");
-	        	target.classList.add("selectedNav");
-	        	selectedNav = target;
-	        	if(target.id == "navHome"){
-	        		event.preventDefault();
-	        		window.scrollTo(0,0);
-	        	}
-	        }
-	    });
+	nav.addEventListener('click', navigation);
+	burger.addEventListener('click', navigation);
 
 	/*Portfolio. Переключение табов*/
 	sortButtons.addEventListener('click', function (event) {
@@ -83,55 +74,94 @@ window.onload = function (){
 	/*Slider. Переключение слайдов*/
 	slides = document.getElementById('slides');
 	slide1 = document.getElementById('slide1');
-	slide2 = document.createElement("div");
-	slide2.innerHTML = '<div class="slider__content2"></div>';
-
-	slides.ontransitionend = ()=> {
-		if(activeSlide == 1){
-			slides.innerHTML = '';
-			slides.appendChild(slide1);
-		}
-		else{
-			slides.innerHTML = '';
-			slides.appendChild(slide2);
-		}
-		slides.className='slides';
-	}
+	slide2 = document.createElement("img");
+	slide2.classList.add('slider__content2');
+	slide2.src = 'assets/img/singolo3/slide2.png';
 
 
 
-	document.getElementById('sliderLeft').addEventListener('click',function () {
-		if(activeSlide == 1){
-			slides.innerHTML = '';
-			slides.appendChild(slide1);
-			slides.appendChild(slide2);
-			activeSlide = 2;
-		}
-		else{
-			slides.innerHTML = '';
-			slides.appendChild(slide2);
-			slides.appendChild(slide1);
-			activeSlide = 1;
-		}
-		slides.className='slides__leftPosition';
-	});
-
-		document.getElementById('sliderRight').addEventListener('click',function () {
-			slides.className = 'slides__rightPosition';
+	let sliderGoTo = async function(way){
+		if(sliderActive){
+			sliderActive = false;
+			let width = header.offsetWidth;
+			let i = 1;
 			if(activeSlide == 1){
-				slides.innerHTML = '';
-				slides.appendChild(slide2);
-				slides.appendChild(slide1);
+				if (way == 'left'){
+					slides.appendChild(slide2);
+				}
+				else{
+					slides.prepend(slide2);
+					slides.style.right = width + 'px';
+					document.getElementById('slider__bottomLine').style.margin = '-3px 0 0 0';
+				}
 				activeSlide = 2;
 			}
 			else{
-				slides.innerHTML = '';
-				slides.appendChild(slide1);
-				slides.appendChild(slide2);
+				if (way == 'left'){
+					slides.appendChild(slide1);
+
+				}
+				else{
+					slides.prepend(slide1);
+					slides.style.right = width + 'px';
+					document.getElementById('slider__bottomLine').style.margin = '0 0 0 0';
+				}
 				activeSlide = 1;
 			}
 
-			sliderNormalPos();
+			let promise = new Promise((resolve)=>{
+				if(way == 'left'){
+					let move = setInterval(async () =>{
+						slides.style.right = width * i / 100 + 'px';
+						i++;
+						if(i > 100){
+							clearInterval(move);
+							if(activeSlide == 2) {
+								document.getElementById('slider__bottomLine').style.margin = '-3px 0 0 0';
+							}else{
+								document.getElementById('slider__bottomLine').style.margin = '0 0 0 0';
+							}
+							resolve();
+						}
+					},3);
+
+				}
+				else{
+					let move = setInterval(async () =>{
+						slides.style.right = width - (width * i / 100)  + 'px';
+						i++;
+						if(i > 100){
+							clearInterval(move);
+							resolve();
+						}
+					},3);
+				}
+
+			});
+			let waitSliderMoving = await promise;
+
+			slides.innerHTML = '';
+			slides.style.right = '0px';
+
+			if(activeSlide == 1){
+				slides.appendChild(slide1);
+			}
+			else{
+				slides.appendChild(slide2);
+			}
+
+			sliderActive = true;
+		}
+
+	};
+
+
+	document.getElementById('sliderLeft').addEventListener('click',function () {
+		sliderGoTo('left');
+	});
+
+		document.getElementById('sliderRight').addEventListener('click',function () {
+			sliderGoTo('right');
 		});
 
 		/*Slider. Активация экранов телефонов*/
@@ -196,5 +226,30 @@ function visibleMenu(){
 	}
 	else{
 		burger.style.display = 'none'
+	}
+}
+
+function navigation(event) {
+	let target = event.target.parentNode;
+	if(target.tagName == "A"){
+		let selectedNavArray = [document.getElementById(selectedNav), document.getElementById(selectedNav + 'Mobile')];
+		selectedNavArray[0].classList.remove("selectedNav");
+		selectedNavArray[1].classList.remove("selectedNav");
+
+		let targetId = target.id.replace('Mobile', '');
+
+		let targetsArray =[document.getElementById(targetId), document.getElementById(targetId + 'Mobile')];
+
+		targetsArray[0].classList.add("selectedNav");
+		targetsArray[1].classList.add("selectedNav");
+		selectedNav = targetId;
+		if(targetId == "navHome"){
+			event.preventDefault();
+			window.scrollTo(0,0);
+		}
+		if(target.id.includes('Mobile')){
+			isMenuNavVisible = !isMenuNavVisible;
+			burger.style.display = 'none';
+		}
 	}
 }
